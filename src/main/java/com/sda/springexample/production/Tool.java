@@ -6,6 +6,11 @@ public class Tool {
     private int weight;
     private String name;
 
+    public Tool(int weight, String name) {
+        this.weight = weight;
+        this.name = name;
+    }
+
     public int getWeight() {
         return weight;
     }
@@ -34,5 +39,13 @@ public class Tool {
     @Override
     public int hashCode() {
         return Objects.hash(weight, name);
+    }
+
+    @Override
+    public String toString() {
+        return "Tool{" +
+                "weight=" + weight +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

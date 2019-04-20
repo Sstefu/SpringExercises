@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://www.springframework.org/schema/c"
+              xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <import resource="tools.xml"/>
 
-    <bean name="worker1" class = "com.sda.springexample.production.Worker" scope="prototype">
+    <bean name="worker" class="com.sda.springexample.production.Worker">
         <constructor-arg index="0" value="sclav"/>
         <constructor-arg index="1" value="30"/>
-<!--        <property name="age" value="200"/>-->
-<!--        <property name="proffesion" value="sclav"/>-->
+        <constructor-arg index="2" ref="workerMotto"/>
+        <property name="tools" ref="tools"/>
     </bean>
 
-    <bean name = "workerMotto" class="com.sda.springexample.production.WorkerMotto">
-        <property name="citate" value="A fi sau a nu fi"/>
+    <bean name="workerMotto" class="com.sda.springexample.production.WorkerMotto">
+        <constructor-arg value="A fi sau a nu fi"/>
     </bean>
 
-<!--    <bean name="worker" class="com.sda.springexample.production.Worker">-->
-<!--        <constructor-arg index="0" value="Gheorghe"/>-->
-<!--        <constructor-arg index="1" value="22"/>-->
-<!--    </bean>-->
+
+
+    <!--    <bean name="worker" class="com.sda.springexample.production.Worker">-->
+    <!--        <constructor-arg index="0" value="Gheorghe"/>-->
+    <!--        <constructor-arg index="1" value="22"/>-->
+    <!--    </bean>-->
+
 
 </beans>

@@ -9,11 +9,14 @@ public class Main {
     public static void main(String[] args) {
         String[] beans = new String[]{"tools.xml", "worker.xml"};
         ApplicationContext xmlApplicationContext = new ClassPathXmlApplicationContext(beans);
-        Tool testTool = xmlApplicationContext.getBean(Tool.class);
+//        Tool testTool = xmlApplicationContext.getBean(Tool.class);
+//        Tool tool2 = xmlApplicationContext.getBean(Tool.class);
 
         Worker testWorker =  xmlApplicationContext.getBean(Worker.class);
         Worker testWorker2 =  xmlApplicationContext.getBean(Worker.class);
+        System.out.println( testWorker );
 
+/*
         if(testWorker.equals(testWorker2)){
             System.out.println("Workers are the same" );
             System.out.println(testWorker + " " + testWorker2);
@@ -21,6 +24,6 @@ public class Main {
         }else  {
             System.out.println("Workers aren't the same");
             System.out.println(testWorker + " " + testWorker2);
-        }
+        }*/
     }
 }

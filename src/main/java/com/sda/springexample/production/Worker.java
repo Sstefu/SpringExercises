@@ -1,14 +1,19 @@
 package com.sda.springexample.production;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Worker {
+
+    private final WorkerMotto workerMotto;
     private String proffesion;
     private int age;
+    private List<Tool> tools;
 
-    public Worker(String proffesion, int age) {
+    public Worker(String proffesion, int age, WorkerMotto workerMotto) {
         this.proffesion = proffesion;
         this.age = age;
+        this.workerMotto = workerMotto;
     }
 
     public String getProffesion() {
@@ -45,7 +50,15 @@ public class Worker {
     public String toString() {
         return "Worker{" +
                 "proffesion='" + proffesion + '\'' +
-                ", age=" + age +
+                ", age=" + age +  " motto : " + workerMotto +  " tools : " + tools +
                 '}';
+    }
+
+    public List<Tool> getTools() {
+        return tools;
+    }
+
+    public void setTools(List<Tool> tools) {
+        this.tools = tools;
     }
 }
