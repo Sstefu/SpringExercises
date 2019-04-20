@@ -6,6 +6,10 @@ public class Worker {
     private String proffesion;
     private int age;
 
+    public Worker(String proffesion, int age) {
+        this.proffesion = proffesion;
+        this.age = age;
+    }
 
     public String getProffesion() {
         return proffesion;
@@ -35,5 +39,13 @@ public class Worker {
     @Override
     public int hashCode() {
         return Objects.hash(proffesion, age);
+    }
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "proffesion='" + proffesion + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

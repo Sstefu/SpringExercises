@@ -12,10 +12,15 @@ public class Main {
         Tool testTool = xmlApplicationContext.getBean(Tool.class);
 
         Worker testWorker =  xmlApplicationContext.getBean(Worker.class);
-        System.out.println(testWorker.getAge());
-        System.out.println(testWorker.getProffesion());
-        System.out.println(testTool.getWeight() + " " + testTool.getName() );
-        System.out.println();
+        Worker testWorker2 =  xmlApplicationContext.getBean(Worker.class);
 
+        if(testWorker.equals(testWorker2)){
+            System.out.println("Workers are the same" );
+            System.out.println(testWorker + " " + testWorker2);
+
+        }else  {
+            System.out.println("Workers aren't the same");
+            System.out.println(testWorker + " " + testWorker2);
+        }
     }
 }
