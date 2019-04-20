@@ -6,6 +6,10 @@
     <bean name="worker" class = "com.sda.springexample.production.Worker">
         <property name="age" value="200"/>
         <property name="proffesion" value="sclav"/>
-
     </bean>
+
+    <bean name = "workerMotto" class="com.sda.springexample.production.WorkerMotto">
+        <property name="citate" value="A fi sau a nu fi"/>
+    </bean>
+
 </beans>

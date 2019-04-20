@@ -1,5 +1,6 @@
 package com.sda.springexample.root;
 import com.sda.springexample.production.Worker;
+import com.sda.springexample.production.WorkerMotto;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,7 +12,6 @@ public class Main {
         Worker testWorker =  xmlApplicationContext.getBean(Worker.class);
         System.out.println(testWorker.getAge());
         System.out.println(testWorker.getProffesion());
-        
 
     }
 }
