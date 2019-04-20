@@ -6,9 +6,10 @@
             http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
         <bean name = "tool" class = "com.sda.springexample.production.Tool">
-            <property name="name" value="Something with worker"/>
+            <property name="name" value="Something with worker to another thing"/>
             <property name="weight" value="20"/>
 
         </bean>
+
 
 </beans>
