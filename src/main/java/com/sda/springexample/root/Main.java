@@ -11,6 +11,7 @@ public class Main {
         Worker testWorker =  xmlApplicationContext.getBean(Worker.class);
         System.out.println(testWorker.getAge());
         System.out.println(testWorker.getProffesion());
+        
 
     }
 }
