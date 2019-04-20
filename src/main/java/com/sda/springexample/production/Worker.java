@@ -1,14 +1,18 @@
 package com.sda.springexample.production;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 import java.util.Objects;
 
 public class Worker {
 
-    private final WorkerMotto workerMotto;
+
     private String proffesion;
     private int age;
     private List<Tool> tools;
+
+    @Autowired private final WorkerMotto workerMotto;
 
     public Worker(String proffesion, int age, WorkerMotto workerMotto) {
         this.proffesion = proffesion;
