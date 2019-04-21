@@ -1,5 +1,7 @@
 package com.sda.springexample.production;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -11,6 +13,9 @@ public class Worker {
     private String proffesion;
     private int age;
     private List<Tool> tools;
+    private static final Log LOGGER = LogFactory.getLog(Worker.class);
+    private final String inITmessage = "inIT method has been done!";
+    private final  String cleanUpMessage = "clean-up message has been done!";
 
     @Autowired private final WorkerMotto workerMotto;
 
@@ -64,5 +69,14 @@ public class Worker {
 
     public void setTools(List<Tool> tools) {
         this.tools = tools;
+    }
+
+    public void initIt()
+    {
+        LOGGER.info(inITmessage);
+    }
+    public void cleanUP()
+    {
+        LOGGER.info(cleanUpMessage);
     }
 }

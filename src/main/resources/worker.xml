@@ -5,11 +5,16 @@
               http://www.springframework.org/schema/beans/spring-beans.xsd">
     <import resource="tools.xml"/>
 
-    <bean name="worker" class="com.sda.springexample.production.Worker">
+    <bean name="worker" class="com.sda.springexample.production.Worker" init-method="initIt" destroy-method="cleanUP">
         <constructor-arg index="0" value="sclav"/>
         <constructor-arg index="1" value="30"/>
         <constructor-arg index="2" ref="workerMotto"/>
         <property name="tools" ref="tools"/>
+
+    </bean>
+
+    <bean name="myownpostprocessor" class="com.sda.springexample.postprocessor.MyOwnPostProcessor">
+
     </bean>
 
     <bean name="workerMotto" class="com.sda.springexample.production.WorkerMotto">

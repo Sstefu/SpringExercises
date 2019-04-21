@@ -14,11 +14,19 @@ public class WorkerTest {
     @Autowired
     private Worker worker;
 
+    @Autowired
+    private WorkerMotto workerMotto;
     @Test
     public void getTools()
     {
         Assert.assertNotNull(worker);
         Assert.assertNotNull(worker.getTools());
+    }
+
+    @Test
+    public void testWorkerMotto()
+    {
+        Assert.assertNotNull(workerMotto);
 
     }
 

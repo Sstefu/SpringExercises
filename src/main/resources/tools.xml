@@ -6,12 +6,12 @@
             http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
         <bean name = "hammer" class = "com.sda.springexample.production.Tool">
-            <constructor-arg index="0" value="1"/>
+            <constructor-arg index="0" value="10"/>
             <constructor-arg index="1" value="hammer"/>
         </bean>
 
     <bean name = "saw" class = "com.sda.springexample.production.Tool">
-            <constructor-arg index="0" value="2"/>
+            <constructor-arg index="0" value="20"/>
             <constructor-arg index="1" value="saw"/>
         </bean>
 
